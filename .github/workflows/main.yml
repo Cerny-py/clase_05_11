@@ -1,4 +1,4 @@
-name: Validar y simular deploy jaja
+name: Validar y simular deploy
 
 on:
   push:
