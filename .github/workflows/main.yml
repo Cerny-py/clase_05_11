@@ -2,8 +2,21 @@ name: Validar y simular deploy
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 permissions:
   contents: read
 
 jobs:
+  validar:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: "Preparar repositorio"
+        uses: actions/checkout@v4
+      - name: "PASO 1 Estructura de carpetas"
+        uses: |
+          test -d app
+          test -f app/index.php
+          test -f Dockerfile
+          test -f docker-compose.yml
+      - name: "CONSTRUCcION"
+        uses: docker compose build
