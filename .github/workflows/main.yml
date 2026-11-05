@@ -18,5 +18,3 @@ jobs:
           test -f app/index.php
           test -f Dockerfile
           test -f docker-compose.yml
-      - name: "CONSTRUCcION"
-        run: docker compose build
