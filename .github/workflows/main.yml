@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   validar:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: "Preparar repositorio"
         uses: actions/checkout@v4
